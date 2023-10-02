@@ -1,9 +1,19 @@
 const { User } = require('../models');
 const jwt = require('../auth/jwt');
 const bcrypt = require('bcryptjs');
+const userSchema = require('./validator/user.validator');
 const { CONFLICT, CREATED } = require('../utils/mapHttp');
 
 const createUser = async (displayName, email, password, image) => {
+  const { error } = userSchema.validate({ displayName, email, password });
+
+  if (error) {
+    return {
+      status: CONFLICT,
+      data: error.message,
+    };
+  }
+
   const userExists = await User.findOne({ where: { email } });
 
   if (userExists) {
