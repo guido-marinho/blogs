@@ -5,6 +5,7 @@ post /login -> realiza o login de um usuario existente -> gera um barrer token q
 
 get /user -> lista com todos os usuarios -> é necessario ussar o token gerado no login na autorizathion <br/>
 get /user/:id ->  lista com usuario correspondente ao id -> é necessario ussar o token gerado no login na autorizathion <br/>
+put /user/:id -> permite editar as informações de um usuario -> é necessario ussar o token gerado no login na autorizathion <br/>
 delete /user/:id -> deleta usuario corresondete ao id ->  é necessario ussar o token gerado no login na autorizathion <br/>
 
 post /categories -> cria uma nova categoria mediante um nome (ex: {name: carros} ->  é necessario ussar o token gerado no login na autorizathion <br/>
