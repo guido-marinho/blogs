@@ -1,6 +1,6 @@
 # blogs-backend
 
-post /user -> cria um novo usuario mediante nome, email, senha e imagem(url - opcional)
+post /user -> cria um novo usuario mediante nome, email, senha e imagem(url - opcional) <br/>
 post /login -> realiza o login de um usuario existente -> gera um barrer token que sera utilizado para acessar as proximas rotas
 
 get /user -> lista com todos os usuarios -> é necessario ussar o token gerado no login na autorizathion
