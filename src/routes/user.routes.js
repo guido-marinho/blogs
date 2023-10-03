@@ -11,5 +11,6 @@ userRouter.use(validateAccessToken);
 userRouter.get('/', userController.getAll);
 userRouter.get('/:id', userController.getById);
 userRouter.delete('/:id', userController.remove);
+userRouter.put('/:id', userController.update);
 
 module.exports = userRouter;

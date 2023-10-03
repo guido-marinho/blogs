@@ -61,6 +61,34 @@ const getById = async (id) => {
   return { status: NO_CONTENT, data: user };
 };
 
+const update = async (id, displayName, email, password, image) => {
+  const user = await User.findByPk(id, {
+    attributes: { exclude: ['password'] },
+  });
+
+  if (!user) {
+    return {
+      status: NOT_FOUND,
+      data: 'User does not exist',
+    };
+  }
+
+  const { error } = userSchema.validate({ displayName, email, password });
+
+  if (error) {
+    return {
+      status: CONFLICT,
+      data: error.message,
+    };
+  }
+
+  const hash = bcrypt.hashSync(password, 10);
+
+  await user.update({ displayName, email, password: hash, image });
+
+  return { status: NO_CONTENT };
+};
+
 const remove = async (id) => {
   const user = await User.findByPk(id, {
     attributes: { exclude: ['password'] },
@@ -82,5 +110,6 @@ module.exports = {
   create,
   getAll,
   getById,
+  update,
   remove,
 };
