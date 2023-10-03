@@ -209,6 +209,30 @@ Instale as dependências
   npm install
 ```
 
+Iicie os containers com docker
+
+```bash
+  docker compose up -d --build
+```
+
+Entre no container
+
+```bash
+  docker exect -it blogs_api bash
+```
+
+Crie o banco de dados
+
+```bash
+  npm presart 
+```
+
+Popule as tabelas
+
+```bash
+  npm seed
+```
+
 Inicie o servidor
 
 ```bash
