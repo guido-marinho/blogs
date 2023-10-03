@@ -15,10 +15,11 @@
   "author": "Guilherme Gatti Marinho",
   "license": "ISC",
   "dependencies": {
-    "crypto-js": "^4.1.1",
+    "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "joi": "^17.10.2",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.6.1",
     "sequelize": "^6.33.0",
     "shelljs": "^0.8.5"
