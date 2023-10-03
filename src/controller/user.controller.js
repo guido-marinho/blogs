@@ -38,6 +38,26 @@ const getById = async (req, res) => {
   return res.status(200).json(data);
 };
 
+const update = async (req, res) => {
+  const { id } = req.params;
+  const { displayName, email, password, image } = req.body;
+
+  const { status, data } = await userService.update(
+    id,
+    displayName,
+    email,
+    password,
+    image
+  );
+
+  if (status === NOT_FOUND)
+    return res.status(404).json({
+      message: data,
+    });
+
+  return res.status(200).json(data);
+};
+
 const remove = async (req, res) => {
   const { id } = req.params;
 
@@ -55,5 +75,6 @@ module.exports = {
   create,
   getAll,
   getById,
+  update,
   remove,
 };
