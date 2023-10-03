@@ -224,19 +224,19 @@ Entre no container
 Crie o banco de dados
 
 ```bash
-  npm presart 
+  npm run presart 
 ```
 
 Popule as tabelas
 
 ```bash
-  npm seed
+  npm run seed
 ```
 
 Inicie o servidor
 
 ```bash
-  npm run start
+  npm start
 ```
 
 
