@@ -39,7 +39,7 @@ const getById = async (req, res) => {
 };
 
 const remove = async (req, res) => {
-  const { id } = req.locals;
+  const { id } = req.params;
 
   const { status, data } = await userService.remove(id);
 
