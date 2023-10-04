@@ -4,7 +4,7 @@ const { validateAccessToken } = require('../middlewares');
 
 const userRouter = Router();
 
-userRouter.post('/', userController.create);
+userRouter.post('/newUser', userController.create);
 
 userRouter.use(validateAccessToken);
 
