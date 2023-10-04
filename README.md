@@ -15,11 +15,11 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
   #### Para começar usar, crie um usuário ou faça um login
   Caso não possua uma conta, deverá criar-la e em seguida efetuar o login
    ```
-  "https://api.url.com/newUser"
+  "https://localhost/newUser"
   ```
   Caso já possua uma conta, basta entrar com usuário e senha
   ```
-  "https://api.url.com/login"
+  "https://localhost/login"
   ```
   Ao efetuar o login com sucesso, receberá um token como o exemplo abaixo:
   ```json
@@ -34,7 +34,7 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
 <details>
   
   ```
-  "https://api.url.com/user"
+  "https://localhost/user"
 
   [
     {
@@ -52,7 +52,7 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
 ]
   ```
   ```
-  "https://api.url.com/user/1"
+  "https://localhost/user/1"
 
     {
         "id": 1,
@@ -76,7 +76,7 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
    ]
   ```
   ```
-  "https://api.url.com/post"
+  "https://localhost/post"
 
    [
     {
@@ -106,7 +106,7 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
    ]
   ```
 ```
-  "https://api.url.com/post/1"
+  "https://localhost/post/1"
     {
         "id": 1,
         "title": "Latest updates, August 1st",
@@ -133,7 +133,7 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
     }
   ```
 ```
-  "https://api.url.com/post/search?q=latest"
+  "https://localhost/post/search?q=latest"
 
    [
     {
