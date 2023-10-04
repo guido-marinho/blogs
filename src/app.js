@@ -4,6 +4,7 @@ const {
   userRouter,
   categoryRouter,
   postRouter,
+  newUserRouter,
 } = require('./routes');
 
 const app = express();
@@ -14,6 +15,7 @@ app.get('/', (_req, res) => {
   res.send('Hello World');
 });
 
+app.use('/newUser', newUserRouter);
 app.use('/login', loginRouter);
 app.use('/user', userRouter);
 app.use('/categories', categoryRouter);
