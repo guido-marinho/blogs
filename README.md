@@ -67,9 +67,28 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
    ```
   "https://localhost/newUser"
   ```
+
+  ```json
+  Corpo da requisição: 
+      {
+          "displayName": "New User",
+          "email": "newuser@email.com",
+          "password": "newUserPassword",
+          "image": "urlimage" --> opcional <--
+      },
+      ...
+  ```
   Caso já possua uma conta, basta entrar com usuário e senha
   ```
   "https://localhost/login"
+
+ ```json
+  Corpo da requisição: 
+      {
+          "email": "newuser@email.com",
+          "password": "newUserPassword",
+      },
+      ...
   ```
   Ao efetuar o login com sucesso, receberá um token como o exemplo abaixo:
   ```json
