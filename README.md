@@ -3,6 +3,56 @@
 
 
 
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:guilhermegattimarinho/blogs-backend.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd blogs-backend
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Iicie os containers com docker
+
+```bash
+  docker compose up -d --build
+```
+
+Entre no container
+
+```bash
+  docker exect -it blogs_api bash
+```
+
+Crie o banco de dados
+
+```bash
+  npm run presart 
+```
+
+Popule as tabelas
+
+```bash
+  npm run seed
+```
+
+Inicie o servidor
+
+```bash
+  npm start
+```
+
 
 
 
@@ -188,56 +238,6 @@ Bem-vindo à API de Gerenciamento de Blogs! Esta documentação deve ajudá-lo a
   put /post/:id -> atualiza o post correspondente ao id mediante titulo e corpo -> é necessario ussar o token gerado no login na autorizathion <br/>
   delete /post/:id -> deleta o post correspondete ao id -> é necessario ussar o token gerado no login na autorizathion <br/>
 </details>
-
-## Rodando localmente
-
-Clone o projeto
-
-```bash
-  git clone git@github.com:guilhermegattimarinho/blogs-backend.git
-```
-
-Entre no diretório do projeto
-
-```bash
-  cd blogs-backend
-```
-
-Instale as dependências
-
-```bash
-  npm install
-```
-
-Iicie os containers com docker
-
-```bash
-  docker compose up -d --build
-```
-
-Entre no container
-
-```bash
-  docker exect -it blogs_api bash
-```
-
-Crie o banco de dados
-
-```bash
-  npm run presart 
-```
-
-Popule as tabelas
-
-```bash
-  npm run seed
-```
-
-Inicie o servidor
-
-```bash
-  npm start
-```
 
 
 ## Stack utilizada
