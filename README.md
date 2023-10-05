@@ -3,18 +3,25 @@
 
 
 
-## Rodando localmente
+## Rodando localmente 
+
+### Backend:
 
 Clone o projeto
 
 ```bash
-  git clone git@github.com:guilhermegattimarinho/blogs-backend.git
+  git clone git@github.com:guilhermegattimarinho/blogs.git
 ```
 
 Entre no diretório do projeto
 
 ```bash
-  cd blogs-backend
+  cd blogs
+```
+Entre no diretório de backend
+
+```bash
+  cd backend
 ```
 
 Instale as dependências
